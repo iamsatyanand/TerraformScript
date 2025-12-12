@@ -5,4 +5,6 @@ module "my_ec2" {
 
 module "my_s3" {
   source = "./modules/s3"
+  bucket_name = "my-terraform-app-bucket"
+  allow_public_read = true
 }

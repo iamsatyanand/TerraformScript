@@ -7,6 +7,7 @@ resource "aws_instance" "linux_vm" {
   instance_type   = "t3.micro"
   key_name        = "terraform-kp"
   security_groups = ["default"]
+  user_data       = file("installhttpd.sh")
   tags = {
     Name = "Testing-Server"
   }
